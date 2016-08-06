@@ -54,9 +54,6 @@ while(1):
     if terminate_check_flag == True:
         break
 
-'''
-Worst case running time = n^6
-'''
 
 
 
