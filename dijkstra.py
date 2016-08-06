@@ -10,10 +10,13 @@ for i in range(1, n):
     'visit_status' : False
     'previous_station' : None
     }
-state_table[0] = {}
-state_table[0]['dist'] = 0
-state_table[0]['visit_status'] = False
-state_table[0]['previous_station'] = 0
+state_table[0] = {
+    dist : 0
+    'visit_status' : False
+    'previous_station' : 0
+    }
+
+
 def get_next_place():
     minimum = sys.maxint
     global state_table
@@ -22,6 +25,7 @@ def get_next_place():
             minimum = state_table[i]['dist']
             place = i
     return place
+
     
 distance_matrix = []
 for i in range(0, n):
@@ -49,6 +53,10 @@ while(1):
             terminate_check_flag = False
     if terminate_check_flag == True:
         break
+
+'''
+Worst case running time = n^6
+'''
 
 
 
